@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Form Input Validation</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="header-heading">
+          <a href="https://teamtreehouse.com/home" target="_blank"><img src="img/frogprint.png" alt="Treehouse logo" class="logo"></a>
+          <h1>Form Input Validation</h1>
+      </div>
+    </header>
+
+    <form action="#" method="post" id="form" class="form" autocomplete="off">
+      <fieldset id="contact-info" class="contact-info">
+        <legend>Contact Info</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </fieldset>
+      
+      <fieldset id="frameworks" class="frameworks">
+        <legend>Framework</legend>
+        <select id="framework" name="framework">
+          <option value="Choose framework" selected hidden>Choose your framework</option>
+          <option value="React">React</option>
+          <option value="Vue">Vue</option>
+          <option value="Angular">Angular</option>
+          <option value="Django">Django</option>
+          <option value="Laravel">Laravel</option>
+          <option value="Rails">Rails</option>
+          <option value="Spring">Spring</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="languages" class="languages">
+        <legend>Language</legend>
+        <div id="radio-wrapper" class="radio-wrapper">
+          <label>
+            <input type="radio" name="language" value="JavaScript"> JavaScript
+          </label>
+          <label>
+            <input type="radio" name="language" value="Python"> Python
+          </label>
+          <label>
+            <input type="radio" name="language" value="PHP"> PHP
+          </label>
+          <label>
+            <input type="radio" name="language" value="Ruby"> Ruby
+          </label>
+          <label>
+            <input type="radio" name="language" value="Java"> Java
+          </label>
+        </div>
+      </fieldset>
+
+      <input type="submit" id="submit" class="submit" value="Submit">
+    </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>

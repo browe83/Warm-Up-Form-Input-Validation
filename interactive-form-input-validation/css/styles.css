@@ -1,0 +1,206 @@
+/**
+ * Treehouse FSJS Techdegree - Project Warm Up
+ * Form Input Validation - CSS
+ * Developed by: Robert Manolis - Student Success Specialist
+ *               Milwaukie, OR - 2020
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root {
+
+  /* Colors - R, G, B */ 
+  --th-grn: 95, 207, 128;
+  --th-grn-hvr: 35, 214, 86;
+  --th-gry: 62, 71, 79;
+  --th-wht: 250, 250, 250;
+
+  --hdg-clr: rgb(var(--th-grn));
+  --text-clr: rgb(var(--th-gry));
+  --bg-wht: rgba(var(--th-wht), 0.9);
+  --bg-lt: rgba(var(--th-gry), 0.1);
+  --bg-dk: rgb(var(--th-gry));
+  --bg-grn: rgb(var(--th-grn));
+  --bdr-clr-lt: rgba(var(--th-wht), 0.9);
+  --bdr-clr-dk: rgba(var(--th-gry), 0.7);
+  --text-shd-lt: rgba(var(--th-wht), 0.9);
+  --box-shd-mid: rgba(var(--th-gry), 0.3);
+  
+  /* Elements */
+  --bdr-lt: 1px solid var(--bdr-clr-lt);
+  --bdr-dk: 1px solid var(--bdr-clr-dk);
+  --box-shd: 2px 2px 3px var(--box-shd-mid);
+  --box-shd-ins: 1px 1px 3px var(--box-shd-mid) inset, 3px 3px 5px var(--box-shd-mid);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: var(--text-clr);
+  background: var(--bg-lt);
+}
+
+header {
+  width: 100%;
+  background: var(--bg-dk);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  box-shadow: var(--box-shd);
+}
+
+header div {
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+}
+
+h1 {
+  display: block;
+  color: white;
+  margin: 0 auto;
+  margin-right: 40px;
+  padding: 20px 0;
+}
+
+.logo {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+form {
+  text-align: left;
+  max-width: 768px;
+  margin: 25px auto;
+  padding: 25px;
+  background: var(--bg-wht);
+  border-radius: 4px;
+  border: var(--bdr-lt);
+  box-shadow: var(--box-shd-ins);
+}
+
+fieldset {
+  padding-top: 15px;
+  margin: auto auto 35px;
+  background: var(--bg-lt);
+  border-radius: 4px;
+  border: var(--bdr-lt);
+  border: none;
+}
+
+legend {
+  color: white;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.9);
+  width: 265px;
+  padding: 10px 15px;
+  background: var(--bg-dk);
+  border: var(--bdr-lt);
+  border-radius: 4px;
+  box-shadow: var(--box-shd);
+}
+
+.radio-wrapper {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: var(--bg-wht);
+  border-radius: 4px;
+  border: var(--bdr-lt);
+  box-shadow: var(--box-shd-ins);
+  transition: all 0.4s ease-out;
+}
+
+.radio-wrapper input {
+ margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: .5em;
+}
+
+.languages label {
+  font-family: 'roboto', sans-serif;
+}
+
+input {
+  font-family: 'roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1.125em;	
+	padding: .8em;
+  border-radius: 4px;
+  border: var(--bdr-lt);
+  box-shadow: var(--box-shd-ins);
+  transition: all 0.4s ease-out;
+}
+
+input[type='radio'] {
+  border: none;
+  box-shadow: none;
+  margin-bottom: none;
+  padding: 0;	
+  height: 15px;
+}
+
+select {
+  width: 265px;
+  margin-bottom: 15px;
+  padding: 7px;
+  outline: none;
+  border-radius: 4px;
+  border: var(--bdr-lt);
+  box-shadow: var(--box-shd-ins);
+  transition: all 0.4s ease-out;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  width: 20px;
+}
+
+/* Handle auto-fill color */
+input:not([type="submit"]):focus {
+	background: #fff;
+}
+
+input:not([type="submit"]):-webkit-autofill,
+input:not([type="submit"]):-webkit-autofill:hover, 
+input:not([type="submit"]):-webkit-autofill:focus {
+  background: #fff;
+  -webkit-box-shadow: var(--box-shd-ins);
+  box-shadow: var(--box-shd-ins);
+}
+
+.submit {
+  cursor: pointer;
+  font-size: 1.5em;
+  outline: none;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.9);
+  max-width: 285px;
+  height: 50px;
+  margin: auto;
+  padding: 0;
+  background: var(--bg-grn);
+  border: var(--bdr-lt);
+  border-radius: 4px;
+  transition: all 0.4s ease-out;
+}
+
+.submit:hover {
+  background: rgb(var(--th-grn-hvr));
+  box-shadow: 1px 1px 3px var(--box-shd-mid) inset, 3px 3px 7px var(--box-shd-mid);
+}
